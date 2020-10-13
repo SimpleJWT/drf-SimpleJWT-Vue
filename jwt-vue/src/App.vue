@@ -1,11 +1,18 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <div v-if="!isLoggedIn"><router-link to="/login">Login</router-link> |</div>
-      <div v-else><div v-on:click="handleLogout" to="/">Logout |</div></div>
-      <router-link to="/ping">Ping</router-link>
-    </div>
+    <b-navbar toggleable="lg" type="dark" variant="info">
+      <router-link to="/" tag="b-navbar-brand">Vue JWT demo</router-link>
+
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <router-link v-if="!isLoggedIn" to="/login" tag="b-nav-item">Login</router-link>
+          <b-nav-item v-else v-on:click="handleLogout" tag="b-nav-item">Logout</b-nav-item>
+          <router-link to="/ping" tag="b-nav-item">Ping</router-link>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
     <router-view/>
   </div>
 </template>

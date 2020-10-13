@@ -1,11 +1,29 @@
 <template>
   <div class="form">
     <form v-on:submit="handleLogin">
-      <label for="username">username</label>
-      <input type="text" id="current-username" v-model="username">
-      <label for="username">password</label>
-      <input type="password" id="current-password" v-model="password">
-      <button type="submit">Login</button>
+      <b-form-group
+        id="input-group-1"
+        label="Email address:"
+        label-for="input-1"
+        description="We'll never share your email with anyone else."
+      >
+        <b-form-input
+          id="input-1"
+          v-model="username"
+          type="text"
+          required
+          placeholder="Enter email"
+        ></b-form-input>
+      </b-form-group>
+      <b-form-group>
+        <label for="text-password">Password</label>
+        <b-input
+          type="password"
+          id="text-password"
+          v-model="password"
+          aria-describedby="password-help-block"></b-input>
+      </b-form-group>
+      <b-button type="submit" variant="primary">Login</b-button>
     </form>
   </div>
 </template>
@@ -48,4 +66,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+form {
+  max-width:400px;
+  margin: 0 auto;
+}
 </style>

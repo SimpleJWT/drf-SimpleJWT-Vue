@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ name }}</h1>
-    <button v-on:click="testPing">Ping</button>
+    <b-button v-on:click="testPing" variant="success">Ping</b-button>
     <p>{{this.pingValue}}</p>
   </div>
 </template>
