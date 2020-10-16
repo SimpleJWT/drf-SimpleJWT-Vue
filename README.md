@@ -1,4 +1,4 @@
-# Template Repository for DRF SimpleJWT Apps
+# Template Repository for DRF SimpleJWT + Vue.js Apps
 
 Initially created: 3 July 2020
 
@@ -7,6 +7,8 @@ TL;DR: Django server repository setup for SimpleJWT. Test user: `test` and pw `t
 ---
 ### Example repositories
 
+- React: [SimpleJWT/drf-SimpleJWT-React](https://github.com/SimpleJWT/drf-SimpleJWT-React)
+- Vue: [SimpleJWT/drf-SimpleJWT-Vue](https://github.com/SimpleJWT/drf-SimpleJWT-Vue)
 - Android: [Andrew-Chen-Wang/mobile-auth-example](https://github.com/Andrew-Chen-Wang/mobile-auth-example)
 - iOS: [Andrew-Chen-Wang/mobile-auth-example](https://github.com/Andrew-Chen-Wang/mobile-auth-example)
 
