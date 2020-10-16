@@ -34,15 +34,13 @@ for that example repository.
 ---
 ### Usage
 
-1. To generate a repository using this template,
-press "Use this template" (highlighted in green).
-Note, this will NOT create a fork of the repository.
-2. Create your git repository, connect via the ssh remote, and pull.
-3. `cd server` to get your terminal/cmd into the server directory.
-4. To run the server, create a virtual environment `virtualenv venv && source venv/bin/activate`, install packages `pip install -r requirements.txt` -- the requirements.txt file is inside the server subdirectory -- and do `python manage.py migrate && python manage.py runserver`.
+#### Backend (Django) Instructions
+
+1. `cd server` to get your terminal/cmd into the server directory.
+2. To run the server, create a virtual environment `virtualenv venv && source venv/bin/activate`, install packages `pip install -r requirements.txt` -- the requirements.txt file is inside the server subdirectory -- and do `python manage.py migrate && python manage.py runserver`.
     - Again, make sure when you do this, you are inside the server directory on your terminal/cmd.
     - On Windows, you should do `venv\Scripts\activate` instead of `source venv/bin/activate`
-5. If you're writing for an example repository, please create
+3. If you're writing for an example repository, please create
 a new directory labeled with the name of the framework (e.g. jwt-ios),
 and add its `.gitignore`. Please use the
 [github/gitignore](https://github.com/github/gitignore) repository.
@@ -56,6 +54,14 @@ project.** You can use a third-party package called
 Django-ratelimit or DRF's internal throttling mechanism.
 Django-ratelimit is more extensive -- covering Django views,
 as well -- and thus more supported by SimpleJWT.
+
+#### Frontend (jwt-vue) Instructions
+
+1. `cd jwt-vue` to get your terminal/server into the frontend (vue) folder.
+
+2. `npm install` to install all of the dependencies for the front end application.
+
+3. `npm run serve` and you should be good to go, ensure that your backend is running on port `http://localhost:8000`, if you run it on another port/ip please change the `BASE_URL` in `jwt-vue/_seriv/api/auth.js`
 
 ---
 ### License
